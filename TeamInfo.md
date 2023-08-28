@@ -9,8 +9,8 @@
 | Captain     |                        |
 | Member1     |       Bingjun Guo      |
 | Member1     | bingjun3@illinois.edu  |
-| Member2     |                        |
-| Member2     |                        |
+| Member2     |   CharlieInTheFranxx   |
+| Member2     |   hz75@illinois.edu    |
 | Member3     |                        |
 | Member3     |                        |
 

@@ -1,0 +1,342 @@
+.center{
+    text-align: center;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table caption{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+th, td{
+    border: 1px solid #999;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.button{
+    padding: 15px 32px;
+    font-size: 20px;
+    background-color: orange;
+    border-style: dashed;
+    border-width: 4px;
+}
+
+.button:hover{
+    padding: 15px 32px;
+    font-size: 20px;
+    background-color: #FF5F0F;
+    border-style: solid;
+    border-color: #13294b;
+
+}
+
+/*---------------------------------------------------------------------------------*/
+
+body{
+    background: url("../img/background.png") no-repeat 0 0/100%;
+}
+
+/* header region */
+#logos{
+    height: 10%;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+#logoTBD{
+    width: 10%;
+    height: 10%;
+    float: left;
+}
+
+#logoUIUC{
+    width: 14%;
+    height: 10%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+}
+
+#teamName{
+    color: #FF5F0F;
+    font-size: 4em;
+    font-family: math;
+
+    display: inline;
+    float: left;
+
+    padding: 1.2%;
+    border-width: 10px;
+    border-style: double;
+    margin-top: 0;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: #13294b;
+}
+
+#teamInfo{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+
+    text-align: left;
+    
+    display: inline;
+}
+
+/* left body region */
+
+#title{
+    float: left;
+    width: 60%;
+    height: 90%;
+
+    font-size: 5em;
+    font-family: system-ui;
+
+    text-align: center;
+    display: inline;
+    float: left;
+
+    padding-bottom: 15%;
+}
+
+/* right body region */
+#catalog{
+    width: 40%;
+    height: 90%;
+    display: inline;
+    float: left;
+
+    padding-bottom: 15%;
+}
+
+.functionItem{
+    width: 100%;
+    display: block;
+    float: left;
+
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.functionLogo{
+    float: left;
+
+    width: 15%;
+    height: 15%;
+
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.functionButton{
+    width: 60%;
+    height: 15%;
+
+    padding-top: 4%;
+    padding-bottom: 4%;
+
+    float: left;
+
+    background-color: orange;
+    color: black;
+    font-size: 2em;
+    text-align: center;
+
+    border-style: dashed;
+    border-width: 5px;
+}
+
+.functionButton:hover{
+    color: #13294b;
+    background-color: #FF5F0F;
+    border-style: solid;
+    border-width: 5px;
+}
+
+/* --------------------------  subsections  --------------------------------- */
+
+.subsection{
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: #13294b;
+    border-style: dotted;
+}
+
+/* Comap Head */
+#comapHead{
+    text-align: center;
+    padding-bottom: 1%;
+}
+
+.comapSearch{
+    width: 20%;
+    padding: 15px;
+    font-size: 20px;
+}
+
+#comapButton{
+    padding: 15px 32px;
+    font-size: 20px;
+}
+
+/* ask data */
+
+#askDataHead{
+    text-align: center;
+}
+
+#askDataStateCounty{
+    padding: 15px 32px;
+    font-size: 20px;
+}
+
+.askDataButton {
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+}
+
+#askData01{
+    color: #FF5F0F;
+    font-size: 1.5em;
+}
+
+#askData02{
+    color: #FF5F0F;
+    font-size: 1.5em;
+}
+
+/* my TBD */
+
+.userInfo{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+.userInput{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+#signInUp{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+#myTBDSubmit{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+#myTBDStatus{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+#myTBDSubmit2{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+#myTBDLogout{
+    padding: 10px 15px;
+    font-size: 20px;
+    float: inline-end;
+}
+
+#myTBDDelete{
+    padding: 10px 15px;
+    font-size: 20px;
+    float: inline-end;
+}
+
+/* SOS */
+
+#SOSHead{
+    text-align: center;
+}
+
+#SOSLoc{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+#SOSSelect{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+#SOSSubmit{
+    padding: 10px 15px;
+    font-size: 20px;
+}
+
+#SOSData01{
+    color: #FF5F0F;
+    font-size: 1.5em;
+}
+
+#SOSData02{
+    color: #FF5F0F;
+    font-size: 1.5em;
+}
+
+#SOSData03{
+    color: #FF5F0F;
+    font-size: 1.5em;
+}
+
+#SOSData04{
+    color: #FF5F0F;
+    font-size: 1.5em;
+}
+
+/* back to top button */
+
+#backButtonRegion{
+    text-align: center;
+    padding-top: 5%;
+}
+
+#backButton{
+    width: 60%;
+    height: 10%;
+
+    display: block;
+
+    background-color: orange;
+    color: black;
+    font-size: 2em;
+    text-align: center;
+
+    border-style: dashed;
+    border-width: 5px;
+}
+
+#backButton:hover{
+    color: #13294b;
+    background-color: #FF5F0F;
+    border-style: solid;
+    border-width: 5px;
+}
+
+
+
+

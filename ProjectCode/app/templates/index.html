@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBD-Demo</title>
+    <link rel="stylesheet" href="../static/styles/my.css">
+    <script src="../static/script/my.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="logos">
+        <img src="../static/img/logo.png" alt="Team TBD" id="logoTBD">
+        <img src="../static/img/UIUC.jpg" alt="UIUC" id="logoUIUC">
+        <h1 id="teamName">Team028-TBD</h1>
+        <pre id="teamInfo">
+
+        Qi Long (qilong2),   Bingjun Guo (bingjun3), 
+        Jiayu Zhou (jiayu9),    Haotian Zhang (hz75)
+        </pre>
+    </div>
+
+    <div id="title">
+        <h1>
+            COVID-19
+        </h1>
+    </div>
+
+    <div id="catalog">
+        <ul type="none">
+            <li class="functionItem">
+                <img src="../static/img/icon1.png" alt="CoMap" class="functionLogo">
+                <a href="#CoMap" class="functionButton">
+                    CoMap
+                </a>
+            </li>
+            <li class="functionItem">
+                <img src="../static/img/icon2.png" alt="Ask Data" class="functionLogo">
+                <a href="#askData" class="functionButton">
+                    Ask Data
+                </a>
+            </li>
+            <li class="functionItem">
+                <img src="../static/img/icon3.png" alt="My TBD" class="functionLogo">
+                <a href="#myTBD" class="functionButton">
+                    My TBD
+                </a>
+            </li>
+            <li class="functionItem">
+                <img src="../static/img/icon4.png" alt="SOS" class="functionLogo">
+                <a href="#SOS" class="functionButton">
+                    SOS
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div>
+        <div>
+            <h1 id="CoMap" class="subsection">CoMap</h1>
+            <div id="comapHead">
+                State:
+                <input type="search" class="comapSearch" id="comapState">
+                <button id="comapButton" onclick="comapSubmit('state')">
+                    Submit
+                </button>
+            </div>
+            <div id="comapHead">
+                County:
+                <input type="search" class="comapSearch" id="comapCounty">
+                <button id="comapButton" onclick="comapSubmit('county')">
+                    Submit
+                </button>
+            </div>
+            <div>
+                <table>
+                    <caption id="comapShowName">Searching Result (Based on 14 days period)</caption>
+                    <tr>
+                        <th id="timeORcounty1">Peak Time 1</th>
+                        <th id="comapShowTime1">NaN</th>
+                    </tr>
+                    <tr>
+                        <th>Peak Case Number 1</th>
+                        <th id="comapShowCase1">NaN</th>
+                    </tr>
+                    <tr>
+                        <th id="timeORcounty2">Peak Time 2</th>
+                        <th id="comapShowTime2">NaN</th>
+                    </tr>
+                    <tr>
+                        <th>Peak Case Number 2</th>
+                        <th id="comapShowCase2">NaN</th>
+                    </tr>
+                    <tr>
+                        <th  id="timeORcounty3">Peak Time 3</th>
+                        <th id="comapShowTime3">NaN</th>
+                    </tr>
+                    <tr>
+                        <th>Peak Case Number 3</th>
+                        <th id="comapShowCase3">NaN</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div>
+            <h1 id="askData" class="subsection">Ask Data</h1>
+            <div id="askDataHead">
+                <select id="askDataStateCounty" onchange="askDataCheckVaccine()">
+                    <option value="state">
+                        State
+                    </option>
+                    <option value="county">
+                        County
+                    </option>
+                </select>
+                <button class="askDataButton" onclick="askDataSubmit('case_rank')">
+                    Case Rank
+                </button>
+                <button class="askDataButton" onclick="askDataSubmit('death_rank')">
+                    Death Rank
+                </button>
+                <button class="askDataButton" onclick="askDataSubmit('vaccine')" id="askDataVaccine">
+                    Vaccine Distribution
+                </button>
+            </div>
+
+            <div>
+                <table>
+                    <caption>TOP 15</caption>
+                    <tr>
+                        <th></th>
+                        <th id="askData01">County, State</th>
+                        <th id="askData02">Data</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th id="askData11"></th>
+                        <th id="askData12"></th>
+                    </tr>
+                    <tr>
+                        <th>2</th>
+                        <th id="askData21"></th>
+                        <th id="askData22"></th>
+                    </tr>
+                    <tr>
+                        <th>3</th>
+                        <th id="askData31"></th>
+                        <th id="askData32"></th>
+                    </tr>
+                    <tr>
+                        <th>4</th>
+                        <th id="askData41"></th>
+                        <th id="askData42"></th>
+                    </tr>
+                    <tr>
+                        <th>5</th>
+                        <th id="askData51"></th>
+                        <th id="askData52"></th>
+                    </tr>
+                    <tr>
+                        <th>6</th>
+                        <th id="askData61"></th>
+                        <th id="askData62"></th>
+                    </tr>
+                    <tr>
+                        <th>7</th>
+                        <th id="askData71"></th>
+                        <th id="askData72"></th>
+                    </tr>
+                    <tr>
+                        <th>8</th>
+                        <th id="askData81"></th>
+                        <th id="askData82"></th>
+                    </tr>
+                    <tr>
+                        <th>9</th>
+                        <th id="askData91"></th>
+                        <th id="askData92"></th>
+                    </tr>
+                    <tr>
+                        <th>10</th>
+                        <th id="askData101"></th>
+                        <th id="askData102"></th>
+                    </tr>
+                    <tr>
+                        <th>11</th>
+                        <th id="askData111"></th>
+                        <th id="askData112"></th>
+                    </tr>
+                    <tr>
+                        <th>12</th>
+                        <th id="askData121"></th>
+                        <th id="askData122"></th>
+                    </tr>
+                    <tr>
+                        <th>13</th>
+                        <th id="askData131"></th>
+                        <th id="askData132"></th>
+                    </tr>
+                    <tr>
+                        <th>14</th>
+                        <th id="askData141"></th>
+                        <th id="askData142"></th>
+                    </tr>
+                    <tr>
+                        <th>15</th>
+                        <th id="askData151"></th>
+                        <th id="askData152"></th>
+                    </tr>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div>
+            <h1 id="myTBD" class="subsection">My TBD</h1>
+            <div>
+                <h1 class="center">User</h1>
+                <fieldset>
+                    <legend>User Info</legend>
+                    <p class="userInfo">
+                        User ID:
+                        <input type="text" class="userInput" placeholder="digits only, max length 11" id="myTBDUserId">
+                    </p>
+                    <p class="userInfo">
+                        Name:
+                        <input type="text" class="userInput" placeholder="max length 40" id="myTBDName">
+                    </p>
+                    <p class="userInfo">
+                        Password:
+                        <input type="password" class="userInput" placeholder="max length 40" id="myTBDPassword">
+                    </p>
+                    <select id="signInUp">
+                        <option value="signIn">
+                            Sign In
+                        </option>
+                        <option value="signUp">
+                            Sign Up
+                        </option>
+                    </select>
+                    <button id="myTBDSubmit" onclick="myTBDSubmit1()">
+                        Submit
+                    </button>
+                    <button id="myTBDLogout" onclick="myTBDLogout()" disabled>
+                        Log Out
+                    </button>
+                </fieldset>
+
+                <fieldset>
+                    <legend>User Update</legend>
+                    <p class="userInfo">
+                        Status:
+                        <select id="myTBDStatus" disabled>
+                            <option value="Susceptible">
+                                Susceptible
+                            </option>
+                            <option value="Infected">
+                                Infected
+                            </option>
+                            <option value="Recovered">
+                                Recovered
+                            </option>
+                        </select>
+                    </p>
+                    <p class="userInfo">
+                        Location:
+                        <input type="text" class="userInput" placeholder="state you are in" id="myTBDState" disabled>
+                    </p>
+                    <button id="myTBDSubmit2" onclick="myTBDSubmit2()" disabled>
+                        Submit
+                    </button>
+                    <button id="myTBDDelete" onclick="myTBDDelete()" disabled>
+                        Delete Account
+                    </button>
+                </fieldset>
+            </div>
+
+            <div>
+                <h1>Today Tips</h1>
+                <p id="myTBDTips"></p>
+            </div>
+        </div>
+
+        <div>
+            <h1 id="SOS" class="subsection">Search OMG Security</h1>
+            <div id="SOSHead">
+                <button id="SOSLoc" onclick="getLocation()">
+                    Share Location
+                </button>
+                <select id="SOSSelect">
+                    <option value="distance">
+                        Distance First
+                    </option>
+                    <option value="resource">
+                        Resources First
+                    </option>
+                </select>
+                <input type="text" class="userInput" placeholder="state you are in" id="SOSState">
+                <button id="SOSSubmit" onclick="SOSSubmit()">
+                    Search
+                </button>
+            </div>
+            
+            <table>
+                <caption>Hospital Recommendation Engine</caption>
+                <tr>
+                    <th></th>
+                    <th id="SOSData01">Hospital</th>
+                    <th id="SOSData02">County, State</th>
+                    <th id="SOSData03">Distance</th>
+                    <th id="SOSData04">Resources</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th id="SOSData11"></th>
+                    <th id="SOSData12"></th>
+                    <th id="SOSData13"></th>
+                    <th id="SOSData14"></th>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <th id="SOSData21"></th>
+                    <th id="SOSData22"></th>
+                    <th id="SOSData23"></th>
+                    <th id="SOSData24"></th>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <th id="SOSData31"></th>
+                    <th id="SOSData32"></th>
+                    <th id="SOSData33"></th>
+                    <th id="SOSData34"></th>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <th id="SOSData41"></th>
+                    <th id="SOSData42"></th>
+                    <th id="SOSData43"></th>
+                    <th id="SOSData44"></th>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <th id="SOSData51"></th>
+                    <th id="SOSData52"></th>
+                    <th id="SOSData53"></th>
+                    <th id="SOSData54"></th>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <th id="SOSData61"></th>
+                    <th id="SOSData62"></th>
+                    <th id="SOSData63"></th>
+                    <th id="SOSData64"></th>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <th id="SOSData71"></th>
+                    <th id="SOSData72"></th>
+                    <th id="SOSData73"></th>
+                    <th id="SOSData74"></th>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <th id="SOSData81"></th>
+                    <th id="SOSData82"></th>
+                    <th id="SOSData83"></th>
+                    <th id="SOSData84"></th>
+                </tr>
+                <tr>
+                    <th>9</th>
+                    <th id="SOSData91"></th>
+                    <th id="SOSData92"></th>
+                    <th id="SOSData93"></th>
+                    <th id="SOSData94"></th>
+                </tr>
+                <tr>
+                    <th>10</th>
+                    <th id="SOSData101"></th>
+                    <th id="SOSData102"></th>
+                    <th id="SOSData103"></th>
+                    <th id="SOSData104"></th>
+                </tr>
+                <tr>
+                    <th>11</th>
+                    <th id="SOSData111"></th>
+                    <th id="SOSData112"></th>
+                    <th id="SOSData113"></th>
+                    <th id="SOSData114"></th>
+                </tr>
+                <tr>
+                    <th>12</th>
+                    <th id="SOSData121"></th>
+                    <th id="SOSData122"></th>
+                    <th id="SOSData123"></th>
+                    <th id="SOSData124"></th>
+                </tr>
+                <tr>
+                    <th>13</th>
+                    <th id="SOSData131"></th>
+                    <th id="SOSData132"></th>
+                    <th id="SOSData133"></th>
+                    <th id="SOSData134"></th>
+                </tr>
+                <tr>
+                    <th>14</th>
+                    <th id="SOSData141"></th>
+                    <th id="SOSData142"></th>
+                    <th id="SOSData143"></th>
+                    <th id="SOSData144"></th>
+                </tr>
+                <tr>
+                    <th>15</th>
+                    <th id="SOSData151"></th>
+                    <th id="SOSData152"></th>
+                    <th id="SOSData153"></th>
+                    <th id="SOSData154"></th>
+                </tr>
+            </table>
+                
+        </div>
+    </div>
+
+    <div id="backButtonRegion">
+        <a href="#" id="backButton">
+            Back to Top
+        </a>
+    </div>
+    
+</body>
+</html>
